@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HotBeans.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hot Beans Recruitment</title>
+    <asp:ContentPlaceHolder ID="cphHead" runat="server" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="mobile.css" rel="stylesheet" type="text/css" media="screen and (max-width: 768px)" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <asp:HyperLink NavigateUrl="~/Default.aspx" runat="server">
+					<img src="images/logo.png" alt="Hot Beans Logo" class="logo" />
+                </asp:HyperLink>
+                <h2>HOT BEANS</h2>
+                <h3>RECRUITMENT</h3>
+                <ul class="nav-buttons">
+                    <li>
+                        <asp:HyperLink
+                            ID="lnkHome"
+                            NavigateUrl="~/Default.aspx"
+                            Text="HOME"
+                            CssClass="nav-link"
+                            runat="server" />
+                    </li>
+                    <li>
+                        <asp:HyperLink
+                            ID="lnkStaff"
+                            NavigateUrl="~/Staff.aspx"
+                            Text="STAFF"
+                            CssClass="nav-link"
+                            runat="server" />
+                    </li>
+                    <li>
+                        <asp:HyperLink
+                            ID="lnkJobs"
+                            NavigateUrl="~/Jobs.aspx"
+                            Text="JOBS"
+                            CssClass="nav-link"
+                            runat="server" />
+                    </li>
+                    <li>
+                        <asp:HyperLink
+                            ID="lnkApply"
+                            NavigateUrl="~/Apply.aspx"
+                            Text="APPLY"
+                            CssClass="nav-link"
+                            runat="server" />
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- Main -->
+            <main>
+                <asp:ContentPlaceHolder ID="cphMain" runat="server" />
+            </main>
+
+            <!-- Right Sidebar -->
+            <aside class="right-sidebar">
+                <h3>Jobs</h3>
+                <ul>
+                    <li><a href="Jobs.aspx" class="job-link">Frontend Developer</a></li>
+                    <li><a href="Jobs.aspx" class="job-link">Backend Developer</a></li>
+                    <li><a href="Jobs.aspx" class="job-link">Full Stack Developer</a></li>
+                </ul>
+                <h3>Web Development Courses:</h3>
+                <div class="resource-box w3schools">
+                    <a href="https://w3schools.com" target="_blank">W3Schools</a>
+                </div>
+                <div class="resource-box edx">
+                    <a href="https://edx.org" target="_blank">EdX</a>
+                </div>
+                <div class="resource-box udemy">
+                    <a href="https://udemy.com" target="_blank">Udemy</a>
+                </div>
+            </aside>
+
+            <!-- Footer -->
+            <footer>
+                <div class="contact">
+                    <p>Tel: 01624 123456</p>
+                    <p>Mobile: 07624 654321</p>
+                </div>
+                <div class="social-box">
+                    <div class="socials">
+                        <a href="https://www.facebook.com" target="_blank">
+                            <img src="images/facebook.png" alt="Facebook" />
+                        </a>
+                        <a href="https://www.twitter.com" target="_blank">
+                            <img src="images/x.png" alt="X" />
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank">
+                            <img src="images/instagram.png" alt="Instagram" />
+                        </a>
+                        <a href="https://www.youtube.com" target="_blank">
+                            <img src="images/youtube.png" alt="YouTube" />
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

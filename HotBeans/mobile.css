@@ -1,0 +1,239 @@
+﻿/* Mobile-specific styles */
+@media (max-width: 768px) {
+    /* General box-sizing */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Wrapper layout */
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-areas:
+            "sidebar"
+            "main"
+            "right"
+            "footer";
+    }
+
+    /* Sidebar adjustments */
+    .sidebar {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex-direction: column; /* Stack navigation buttons vertically */
+    }
+
+    .nav-link {
+        padding: 8px; /* Reduce padding for smaller screens */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    /* Main content adjustments */
+    main {
+        padding: 15px; /* Reduce padding for smaller screens */
+    }
+
+    .info-section {
+        flex-direction: column; /* Stack "About Us" and "Latest Updates" vertically */
+        gap: 15px; /* Add spacing between sections */
+    }
+
+    .info-box {
+        width: 100%; /* Full width for mobile */
+        padding: 10px; /* Reduce padding */
+    }
+
+    @media (max-width: 768px) {
+        .info-box.latest-updates {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack content vertically */
+            gap: 10px; /* Add spacing between items */
+            padding: 10px; /* Adjust padding */
+            width: 100%; /* spans the full width */
+        }
+    }
+
+    /* Right sidebar adjustments */
+    .right-sidebar {
+        margin-top: 20px; /* Add spacing below the main content */
+        text-align: center; /* Center-align content */
+    }
+
+    .resource-box {
+        width: 100%; /* Full width for mobile */
+        margin: 10px 0; /* Add spacing between resource boxes */
+    }
+
+    /* Footer adjustments */
+    footer {
+        display: flex;
+        flex-direction: column; /* Stack footer content vertically */
+        text-align: center; /* Center-align text */
+    }
+
+    .socials {
+        margin-top: 10px; /* Add spacing above social icons */
+    }
+
+    /* Staff card adjustments */
+    .staff-card {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center; /* Center-align text */
+        padding: 15px; /* Add padding for better spacing */
+        margin-bottom: 20px; /* Add spacing between cards */
+    }
+
+    .staff-image {
+        margin-bottom: 10px; /* Add spacing below the image */
+    }
+
+    .staff-info h2, .staff-info h3 {
+        margin: 5px 0; /* Reduce margin for headings */
+    }
+
+    .staff-info p {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.5; /* Improve line spacing */
+    }
+
+    /* Job card adjustments */
+    .job-card {
+        width: 90%; /* Reduce width for smaller screens */
+        margin: 0 auto; /* Center the card */
+    }
+
+    /* Button adjustments */
+    .apply-button {
+        padding: 15px 25px; /* Larger padding */
+        font-size: 1.2rem; /* Increase font size */
+    }
+
+    /* Dropdown adjustments */
+    .job-dropdown {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 20px;
+    }
+
+    /* Carousel adjustments */
+    .carousel {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Adjust height */
+        display: none; /* Hide carousel for mobile */
+    }
+
+        .carousel .slide {
+            height: auto; /* Adjust slide height */
+        }
+
+    /* Text and image adjustments */
+    body {
+        font-size: 14px; /* Reduce base font size for smaller screens */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Scales down headings */
+    }
+
+    p {
+        font-size: 1rem; /* Adjusts paragraph text size */
+    }
+
+    img {
+        max-width: 100%; /* images will scale to fit their container */
+        height: auto; /* Maintains aspect ratio */
+    }
+
+    @media (max-width: 768px) {
+        .info-box.twitter-feed .tweet-row {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Stack tweets vertically */
+            gap: 20px; /* Add more spacing between tweets */
+            align-items: center; /* Center-align tweets */
+        }
+
+        @media (max-width: 768px) {
+            .info-box.twitter-feed .tweet-container {
+                width: 100%; /* Allow the tweet to take full width */
+                max-width: 500px; /* Limit the maximum width */
+                margin: 0 auto; /* Center the tweet container */
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+                padding: 10px; /* Add padding around the tweet */
+                border-radius: 8px; /* Add rounded corners */
+                background-color: #fff; /* clean background */
+                overflow: auto; /* Prevent content overflow */
+            }
+        }
+    }
+}
+/* General container adjustments for mobile */
+.apply-page {
+    padding: 10px; /* Reduce padding for smaller screens */
+    gap: 15px; /* Adjust spacing between sections */
+}
+
+/* Application form adjustments */
+.application-form {
+    padding: 15px; /* Reduce padding for smaller screens */
+    font-size: 0.9rem; /* Adjust font size for readability */
+    box-shadow: none; /* Remove shadow for a cleaner look on mobile */
+}
+
+/* Form group adjustments */
+.form-group {
+    margin-bottom: 10px; /* Reduce spacing between form fields */
+}
+
+.form-control {
+    width: 100%; /* inputs take full width */
+    font-size: 1rem; /* Adjust font size for inputs */
+    padding: 8px; /* Adjust padding for smaller screens */
+}
+
+/* Submit button adjustments */
+.submit-button {
+    width: 100%; /* Make the button span the full width */
+    font-size: 1rem; /* Adjust font size */
+    padding: 10px; /* Adjust padding for better touch targets */
+}
+
+/* Address section adjustments */
+.address-section {
+    padding: 15px; /* Reduce padding */
+    font-size: 0.9rem; /* Adjust font size */
+    text-align: center; /* Center-align text for better readability */
+}
+
+/* Map section adjustments */
+.map-section iframe {
+    width: 100%; /* Make the map responsive */
+    height: 300px; /* Adjust height for smaller screens */
+    border-radius: 8px; /* Keep rounded corners */
+}
+
+/* Headings adjustments */
+.application-form h2,
+.address-section h2,
+.map-section h2 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+    margin-bottom: 10px; /* Add spacing below headings */
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+    .apply-page {
+        flex-direction: column; /* sections stack vertically */
+    }
+
+    .application-form,
+    .address-section,
+    .map-section {
+        margin-bottom: 15px; /* Add spacing between sections */
+    }
+}
+
+}
+}
